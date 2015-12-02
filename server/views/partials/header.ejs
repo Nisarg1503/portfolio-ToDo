@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      
+          <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+        <!-- extra CSS for fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+      
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css">   
+           <!-- custom theme -->
+         <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <style>
+
+    </style>
+
+  <body>
+       <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+   <ul class="nav navbar-nav">
+      <% if (title == "Home") { %>
+      <li>
+        <% } else { %>
+        <li>
+        <% } %>
+        <a class="blog-nav-item" href="/">Home</a></li>
+      <% if (title == "About") { %>
+      <li>
+        <% } else { %>
+        <li>
+        <% } %>
+        <a class="blog-nav-item" href="/about">About</a></li>
+      <% if (title == "Projects") { %>
+      <li>
+        <% } else { %>
+        <li>
+        <% } %>
+        <a class="blog-nav-item" href="/projects">Projects</a></li>
+      <% if (title == "Services") { %>
+      <li>
+        <% } else { %>
+        <li>
+        <% } %>
+        <a class="blog-nav-item" href="/services">Services</a></li>
+      <% if (title == "Contact Me") { %>
+      <li>
+        <% } else { %>
+        <li>
+        <% } %>
+        <a class="blog-nav-item" href="/contact">Contact</a></li>
+         <% if (displayName) { %>
+       <% if (title == "Business Contact") { %>
+           <li>
+           <% } else { %>
+            <li>
+             <% } %>
+              <a class="blog-nav-item" href="/businesscontacts">Hello, 
+              <%= displayName %></a>
+            </li>
+            <% if(title == "Todo List" ) { %>
+            <li class="active">
+              <% } else { %>
+            <li>
+              <% } %>
+              <a class="blog-nav-item" href="/todolist">Todo List</a></li>
+            
+            <% if(title == "Users" ) { %>
+            <li class="active">
+              <% } else { %>
+            <li>
+              <% } %>
+              <a class="blog-nav-item" href="/users">Users</a></li>
+             
+           <li><a class="blog-nav-item" href="/logout">Logout</a></li>
+           <% } else { %>
+           <% if (title == "Login") { %>
+           <li>
+            <% } else { %>
+             <li>
+              <% } %>
+              <a class="blog-nav-item" href="/login">Login</a></li>
+            <% } %>
+            </li>
+        
+            
+          </ul>
+      </nav>
+           </div>
+      </div>
+    </body>
